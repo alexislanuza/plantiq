@@ -50,7 +50,7 @@
   </div>
 </div>
 
-<div class="navbar">
+<!-- <div class="navbar">
   <a href="home.php">
     <i class="fa fa-home" style="font-size: 24px;"></i><br> Home
   </a>
@@ -66,7 +66,11 @@
   <a href="#contact">
     <i class="fa fa-cog" style="font-size: 24px;"></i><br> Settings
   </a>
-</div>
+</div> -->
+
+
+  <!-- BOTTOM NAVBAR -->
+  <?php include 'css\navbar.php'; ?>
 
 <script>
     document.getElementById('seeButton').addEventListener('click', function() {
