@@ -1,1 +1,1 @@
-# plantiq
+# plant
