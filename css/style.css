@@ -9,8 +9,23 @@
 
 body {
   background: #FFFFFF;
-  overflow-y: scroll;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent; 
+}
+
 .container {
   max-width: 440px;
     margin: auto;
@@ -23,7 +38,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 img {
@@ -58,6 +73,12 @@ img {
   margin-bottom: 15px;
   position: relative;
 }
+
+.checkbox {
+  margin-left: 370px;
+  margin-bottom: 5px; 
+}
+
 
 .wrapper form .row input {
   height: 100%;
@@ -106,6 +127,9 @@ form .row input:focus {
       font-size: 14px;
       
   }
+  .checkbox {
+    margin-left: 5px; 
+}
 }
 
 @media screen and (max-width: 480px) {

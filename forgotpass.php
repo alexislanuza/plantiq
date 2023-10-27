@@ -14,8 +14,16 @@ include 'php/userconfig.php';
 <head>
 <title>Forgot Password</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" href="css/img/icon.png" type="image/x-icon">
 <link rel="stylesheet" href="path/to/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="shortcut icon" href="css/img/icon.png" type="image/x-icon">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="scripts/google-api.js"></script>
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
  <script src="path/to/bootstrap.min.js"></script>
@@ -25,44 +33,51 @@ include 'php/userconfig.php';
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/8f7ec986ad.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-   <link rel="stylesheet" href="css/home.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+
 </head>
 <body>
-<br><br>
-<div class="container">
-    <div class="card shadow">
-        <h1 class="mx-auto">Forgot Password</h1>
-        <div class="card-body">
-            <form action="php/email_check.php" method="post">
-            <input type="email" name="email" class="form-control form-control-lg my-4" placeholder="juandelacruz@gmail.com" required>
-            <center><label><span style="color: green">Email</span>/Enter OTP/New Password</label></center>
-            <center><button type="submit" class="btn btn-success btn-lg mt-3">Send OTP</button></center>
-            </form>
-            <?php
-                // Display error messages if they were passed in the URL
-                if (isset($_GET['errors'])) {
-                    $errors = explode(',', $_GET['errors']);
-                    foreach ($errors as $error) {
-                        echo "<script>Swal.fire({
-                                icon: 'error',
-                                title: 'ERROR',
-                                text: '$error'
-                            });</script>";
 
-                }
-                unset($_GET['errors']);
-                }
-            ?>
+<div class="center-container">
+    <img src="css/img/title.png" alt="">
+</div>
+<div class="container">
+    <div class="wrapper ">
+        <div class="title mt-2"><h2>Forgot Password</h2></div>
+        <form action="php/user_signin.php" method="post">
+            <div class="row d-flex justify-content-center">
+                <input type="text" class="form-control" name="username" id="username" placeholder="juandelacruz@gmail.com" required>
+            </div>
+            
+            <div class="d-flex justify-content-center">
+            <label style="font-size:20px; font-weight:500;" ><span style="color: #26DB23;">Email</span>/Enter OTP/New Password</label>
+                
+            </div>
+ 
+             <div class="d-flex justify-content-center">
+             <button type="submit" class="btn btn-lg mt-4" style="background-color: #26DB23; color: #ffffff;" >Send OTP</button>
+
+             </div>
+             </form>
+             
+             <div class="d-flex justify-content-center mt-3" >
+                <a style="font-size:15px;  font-weight:bold;">Click here if you didn't receive a code:</a>
+                <a href="register.php" style="font-size:15px; color: #26DB23; margin-left: 10px;  font-weight:bold;">Resend</a>
+            </div>
+             <div class="d-flex justify-content-center mt-3">
+             <a style="font-size:15px;  font-weight:bold;">You remember your account?</a>
+                <a href="register.php" style="font-size:15px; color: #26DB23; margin-left: 10px;  font-weight:bold;">Log In</a>
+            </div>
+                
+             </div>
+
+             
         </div>
-        <div class="mx-auto">
-            <label style="color: grey">Click here if you didn't receive a code:</label>  <a href="" style="color: green">Resend</a>
-        </div><br><br><br>
-        <div class="mx-auto">
-            <label style="color: grey">You remember your account?</label>  <a href="login.php" style="color: green">Login</a>
-        </div>
+
     </div>
 </div>
+
+
 <script>
     if (window.performance) {
       if (performance.navigation.type == 1) {

@@ -20,7 +20,7 @@
     <!-- Your content here -->
     <div class="container">
           
-<!-- 1 column -->
+<!-- plant progress column -->
 <div class="container">
   <div class="row">
     

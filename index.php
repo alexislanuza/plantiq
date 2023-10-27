@@ -22,8 +22,9 @@ include 'php/userconfig.php';
     <script src="scripts/google-api.js"></script>
 </head>
 <body>
+
 <div class="center-container">
-    <img src="css/img/title.png" alt="Your Image">
+    <img src="css/img/title.png" alt="">
 </div>
 <div class="container">
     <div class="wrapper ">
@@ -58,7 +59,7 @@ include 'php/userconfig.php';
                 }
             ?>
              <div class="d-flex justify-content-center">
-             <button type="submit" class="btn btn-lg" style="background-color: #26DB23; color: #ffffff;" >Log In</button>
+             <button type="submit" class="btn btn-lg mt-3" style="background-color: #26DB23; color: #ffffff;" >Log In</button>
 
              </div>
              </form>
